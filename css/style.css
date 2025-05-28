@@ -1,0 +1,252 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background: #EE9CA7;
+    background: linear-gradient(90deg, rgba(238, 156, 167, 1) 0%, rgba(255, 221, 225, 1) 20%);
+}
+/* navbar */
+.navbar {
+    width: 100%;
+    height: 76px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+.navbar-collapse {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+}
+.navbar-brand {
+    font-size: 24px;
+}
+.navbar-nav a {
+    margin-left: 8px;
+    font-weight: bold;
+}
+.search-bar {
+    display: flex;
+}
+.search-icon {
+    width: 45px;
+    background-color: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.search {
+    width: 420px;
+    height: 40px;
+    outline: none;
+    border: none;
+    padding: 10px;
+    background-color: #eee;
+}
+.right-menu {
+    display: flex;
+}
+
+.right-menu .profile, .right-menu .cart {
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.right-menu .profile i, .right-menu .cart i {
+    font-size: 20px;
+}
+.profile-card {
+    height: auto !important;
+}
+.profile:hover .profile-card {
+    display: block;
+}
+.profile .profile-name:hover, 
+.navbar-nav a:hover {
+    cursor: pointer;
+    border-bottom: 4px solid #ff3366;
+}
+.cart p:hover{
+    cursor: pointer;
+    border-bottom: 4px solid #ff3366;
+}
+/* hero section */
+.hero-section {
+    width: 100%;
+    height: 500px;
+    margin-top: 75px;
+}
+.banner {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+}
+/* services-section */
+.services-section, .products-section, .contact-section, .payment-section {
+    width: 100%;
+    height: 220px;
+    margin-top: 65px;
+}
+.services-heading, .products-heading, .contact-heading, .payment-heading {
+    width: 100%;
+    height: 60px;
+    background-color: #ffffff;
+    color: #ff3366;
+    box-shadow: 0px 0px 10px #aaaaaa;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+.services-container {
+    width: 100%;
+}
+.slider-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider-track {
+  display: flex;
+  width: max-content;
+  animation: slide 20s 2s linear infinite;
+}
+
+.card {
+  min-width: 300px;
+  height: 100px;
+  margin-right: 20px;
+  flex-shrink: 0;
+  box-shadow: 0px 0px 10px #aaaaaa;
+}
+.fa-star, .fa-star-half {
+    color: #ffc107;
+}
+
+/* Sliding animation */
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+/* footer start */
+.footer-container {
+    margin-top: 100px;
+}
+.list-unstyled li a:hover {
+    text-decoration: underline !important;
+}
+.about-footer {
+    margin-top: 900px;
+}
+
+
+/* RESPONSIVE LAYOUTS */
+/* Tab-768px */
+@media(max-width: 768px) {
+    .lead {
+        margin-top: 30px;
+    }
+    .about-footer {
+        margin-top: 980px;
+    }
+    .cartItems {
+        width: 300px;
+    }
+}
+/* mobile-425 */
+@media (max-width: 425px) {
+    /* hero section */
+    .hero-section {
+        margin-top: 60px;
+    }
+    .banner {
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: white;
+    }
+    .banner h1 {
+        font-size: 23px;
+    }
+    .banner p{
+        text-align: justify;
+    }
+    .contact-section {
+        margin-top: 980px;
+    }
+    .payment-section {
+        margin-top: 730px;
+    }
+    .footer-container {
+        margin-top: 250px;
+    }
+    .about-footer {
+        margin-top: 1550px;
+    }
+    .lead {
+        margin-top: 30px;
+    }
+    .p-card {
+        width: 400px;
+    }
+    .p-footer {
+        height: 740px;
+    }
+    .p-footer-heading {
+        margin-top: 30px;
+    }
+    .cartItems {
+        width: 300px;
+    }
+}
+
+/* mobile-375 */
+@media(max-width: 375px) {
+    .about-footer {
+        margin-top: 1750px !important;
+    }
+    .p-card {
+        width: 350px;
+    }
+}
+/* mobile-325 */
+@media(max-width: 325px) {
+    .about-footer {
+        margin-top: 1980px !important;
+    }
+    .p-card {
+        width: 310px;
+    }
+    .p-footer {
+        height: 780px;
+    }
+    .p-footer-heading {
+        margin-top: 80px;
+    }
+}

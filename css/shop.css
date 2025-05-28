@@ -1,0 +1,115 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* 
+.navbar {
+  background-color: #fff;
+  padding: 15px 40px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.nav-items {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.nav-item {
+  position: relative;
+  margin-right: 30px;
+}
+
+.nav-item a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 10px;
+} */
+
+
+/* Mega menu initially hidden */
+.mega-menu {
+  display: none;
+  position: absolute;
+  top: 100%; /* just below the navbar */
+  left: 0;
+  width: 800px;
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+/* Each column inside mega menu */
+.menu-column {
+  width: 20%;
+  float: left;
+  padding: 10px;
+}
+
+.menu-column h4 {
+  font-weight: bold;
+  color: #e91e63;
+  margin-bottom: 10px;
+}
+
+.menu-column a {
+  display: block;
+  color: black;
+  text-decoration: none;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+/* Container for nav link and mega menu */
+.navbar-nav {
+  position: relative;
+}
+
+/* Show mega menu on hover of Shop link */
+.navbar-nav a[href="shop.html"]:hover + .mega-menu,
+.mega-menu:hover {
+  display: block;
+}
+.card-img-top {
+  height: 400px;
+  border-bottom: 1px solid #ccc;
+}
+
+.buy_now_btn, .add_to_card_btn {
+  background-color: #e91e63;
+  color: white;
+  font-weight: bold;
+}
+.add_to_card_btn {
+  background-color: #FFC107;
+}
+.add_to_card_btn:hover {
+  background-color: #FFC107;
+  color: white;
+}
+.buy_now_btn:hover {
+  background-color: #e91e63;
+  color: white;
+}
+
+
+/* RESPONSIVE LAYOUTS */
+
+
+/* Tab */
+@media(max-width:768px) {
+  .navbar {
+    width: 100% !important;
+    height: auto !important;
+  }
+  .navbar-nav a[href="shop.html"]:hover + .mega-menu,
+  .mega-menu:hover {
+    display: none;
+  }
+}
