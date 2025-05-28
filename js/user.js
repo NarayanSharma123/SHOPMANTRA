@@ -66,7 +66,8 @@ if (signupForm) {
         saveUsers(users);
 
         alert('Signup successful! Please log in.');
-        window.location.href = 'user.html';
+        document.querySelector('.signup-container').style.display = 'none';
+        document.querySelector('.login-container').style.display = 'block';
     });
 }
 
